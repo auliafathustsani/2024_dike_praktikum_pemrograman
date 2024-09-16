@@ -11,10 +11,6 @@ all: $(TARGET)
 $(TARGET): $(SRC)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
 
-# Run the program with user input
-run: $(TARGET)
-	./$(TARGET)
-
 # Run the program in test mode (using test.txt)
 test: $(TARGET)
 	./$(TARGET) test
@@ -24,4 +20,4 @@ clean:
 	rm -f $(TARGET)
 
 # Phony targets to avoid conflicts
-.PHONY: all run clean test
+.PHONY: all clean test
